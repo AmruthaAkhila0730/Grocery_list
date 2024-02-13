@@ -1,0 +1,94 @@
+body{
+    background: linear-gradient(45deg, rgb(123, 215, 252), violet, rgb(254, 254, 128), rgb(121, 252, 121));
+    background-size: 200% 100%;
+    height: 100%;
+    background-attachment: fixed;
+    padding-top: 30px;
+    animation: akhi 2s linear infinite;
+   }
+   @keyframes akhi {
+    0%{
+        background-position: 0 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0 50%;
+    }
+   }
+.container{
+    width: 300px;
+    /* position: relative; */
+}
+ul{
+    position: relative;
+    height: 250px;
+    width: 300px;
+    overflow: auto;
+    padding: 10px;
+    align-items: center;
+}
+li{
+    position: relative;
+    list-style-type: none;
+    border: 1px solid black;
+    cursor: pointer;
+    font-size: large;
+    /* height: 30px; */
+    width: 95%;
+    margin: 2%;
+}
+li::before {
+    content: " >";
+    padding-right: 5%;
+    color: black;
+    font-weight: bold;
+}
+.done{
+    text-decoration: line-through;
+    color: black;
+}
+.delete{
+    position: absolute;
+    cursor: pointer;
+    height: 28px;
+    width: 30px;
+    padding: 0%;
+    text-align: center;
+    right: 0px;
+    background-color: white;
+    border: none;
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+}
+.delete:hover{
+    background-color: red;
+    color: white;
+}
+.edit{
+    position: absolute;
+    cursor: pointer;
+    height: 28px;
+    width: 30px;
+    text-align: center;
+    padding: 0%;
+    right: 30px;
+    background-color: white;
+    border: 1px solid black;
+    border-right: none;
+    border-top: none;
+}
+.edit:hover{
+    background-color: rgb(140, 140, 250);
+    color: white;
+}
+  @media screen and (min-width: 1000px){
+    .container{
+        width: 500px;
+    }
+    ul{
+        height: 400px;
+        width: 500px;
+    }
+}
